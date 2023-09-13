@@ -5482,7 +5482,7 @@
                         .navbar {
                             position: relative;
                             min-height: 50px;
-                            margin-bottom: 20px;
+                            margin-bottom: 0px;
                             border: 1px solid transparent;
                         }
                         /* line 14, /usr/local/rvm/gems/ruby-2.2.4/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
@@ -8947,7 +8947,7 @@ Home Page Content
                         
                         .jumbotron {
                             height: 550px;
-                            padding-top: 125px;
+                            padding-top: 75px;
                             background-color: #18BC9C;
                             background-size: cover;
                             color: white;
@@ -9418,7 +9418,7 @@ Media Queries
                         /* linha 70 - parceiros*/
                         
                         .parceiros {
-                            height: 215px;
+                            height: 135px;
                             padding: 0;
                             background-color: #f0ad4e;
                             background-size: cover;
