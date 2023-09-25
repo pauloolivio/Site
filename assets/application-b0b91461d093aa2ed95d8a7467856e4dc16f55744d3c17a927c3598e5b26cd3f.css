@@ -1587,8 +1587,8 @@
                         .h5,
                         h6,
                         .h6 {
-                            margin-top: 10px;
-                            margin-bottom: 10px;
+                            margin-top: 0px;
+                            margin-bottom: 25px;
                         }
                         /* line 41, /usr/local/rvm/gems/ruby-2.2.4/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_type.scss */
                         
@@ -2206,8 +2206,8 @@
                         .col-lg-12 {
                             position: relative;
                             min-height: 1px;
-                            padding-left: 15px;
-                            padding-right: 15px;
+                            padding-left: 10px;
+                            padding-right: 10px;
                         }
                         /* line 27, /usr/local/rvm/gems/ruby-2.2.4/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
                         
@@ -6537,7 +6537,7 @@
                         
                         .jumbotron h1,
                         .jumbotron .h1 {
-                            color: inherit;
+                            color: black;
                         }
                         /* line 16, /usr/local/rvm/gems/ruby-2.2.4/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_jumbotron.scss */
                         
@@ -6576,7 +6576,7 @@
                             /* line 43, /usr/local/rvm/gems/ruby-2.2.4/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_jumbotron.scss */
                             .jumbotron h1,
                             .jumbotron .h1 {
-                                font-size: 63px;
+                                font-size: 40px;
                             }
                         }
                         /* line 7, /usr/local/rvm/gems/ruby-2.2.4/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_thumbnails.scss */
@@ -8880,11 +8880,6 @@ Helpers
                             display: flex;
                             align-items: center;
                         }
-                        /* line 110, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
-                        
-                        .buffer-top {
-                            padding: 25px;
-                        }
                         /* line 114, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
                         
                         .buffer-bottom {
@@ -8952,10 +8947,10 @@ Home Page Content
                             background-size: cover;
                             color: white;
                         }
-                        /* line 175, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
+                        /* Texto do logo - Medida maior */
                         
                         .jumbotron h1 {
-                            font-size: 48px;
+                            font-size: 35px;
                         }
                         /* line 179, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
                         
@@ -9122,7 +9117,7 @@ App Page
                         
                         .practice {
                             padding: 20px;
-                            height: 100vh;
+                            height: 100%;
                             background-color: #354551;
                         }
                         /* line 321, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
@@ -9130,18 +9125,14 @@ App Page
                         .exercise-content {
                             border-radius: 4px;
                             background-color: #F1F2F3;
-                            height: 50%;
-                            padding: 20px 20px 40px 20px;
+                            padding: 20px;
                         }
-                        /* line 328, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
                         
                         .quiz-content {
                             margin-top: 20px;
                             border-radius: 4px;
                             background-color: #F1F2F3;
-                            height: 48%;
-                            padding: 20px 20px 40px 20px;
-                            position: relative;
+                            padding: 20px;
                         }
                         /* line 337, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
                         
@@ -9335,7 +9326,7 @@ App Page
                             }
                             /* line 497, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
                             #wrapper.active #sidebar-wrapper {
-                                left: 250px;
+                                left: 350px;
                                 width: 250px;
                                 transition: all .4s ease 0s;
                             }
@@ -9354,14 +9345,12 @@ Misc
                             -webkit-box-sizing: border-box;
                             box-sizing: border-box;
                         }
-                        /*===================================================================
-Media Queries
-====================================================================*/
+                        /*Texto do logo - mudança para medida menor*/
                         
                         @media (max-width: 767px) {
                             /* line 523, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
                             .jumbotron h1 {
-                                font-size: 2em;
+                                font-size: 25px;
                             }
                             /* line 526, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
                             img {
@@ -9530,41 +9519,6 @@ Media Queries
                                 visibility: visible;
                             }
                         }
-                        /* LG */
-                        
-                        @media (min-width: 991px) {
-                            /* show 4th item */
-                            .carousel-inner .active+.carousel-item+.carousel-item+.carousel-item {
-                                display: block;
-                            }
-                            .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item+.carousel-item {
-                                transition: none;
-                            }
-                            /* Show 5th slide on lg if col-lg-3 */
-                            .carousel-inner .active.col-lg-3.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
-                                position: absolute;
-                                top: 0;
-                                right: -25%;
-                                /*change this with javascript in the future*/
-                                z-index: -1;
-                                display: block;
-                                visibility: visible;
-                            }
-                            /* left or forward direction */
-                            .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
-                                position: relative;
-                                transform: translate3d(-100%, 0, 0);
-                                visibility: visible;
-                            }
-                            /* right or prev direction //t - previous slide direction last item animation fix */
-                            .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
-                                position: relative;
-                                transform: translate3d(100%, 0, 0);
-                                visibility: visible;
-                                display: block;
-                                visibility: visible;
-                            }
-                        }
                         /* estilo pdf */
                         
                         .pdf_content {
@@ -9572,7 +9526,7 @@ Media Queries
                             flex-direction: column;
                             align-items: center;
                             justify-content: center;
-                            margin-top: 10px;
+                            margin-bottom: 20px;
                             margin-top: 20px;
                         }
                         
@@ -9601,4 +9555,22 @@ Media Queries
                         .pdf_slide {
                             max-width: 100%;
                             padding: 20px;
+                        }
+                        /* estilo logo */
+                        
+                        .logo {
+                            padding-top: 40px;
+                        }
+                        /* texto do logo */
+                        
+                        @media (min-width: 992px) {
+                            .texto-grande {
+                                font-size: 30px;
+                            }
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .texto-pequeno {
+                                font-size: 22px;
+                            }
                         }
