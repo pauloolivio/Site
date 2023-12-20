@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from linuxjourney.com/lesson/what-is-a-router by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Aug 2023 09:41:54 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DMEP-group | Usinagem</title>
+    <script src="../assets/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js" data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all" href="../assets/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css" data-turbolinks-track="true" />
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="FZTSZKN7+Fp+uALeFUetKoIurtteRcfikEdYFpJeu80RmmAh5mnIBti9GyO0DoWiT0jWdu/iiJ9PmQoZvqC1eQ==" />
+    <script src="https://unpkg.com/pdfjs-dist@2.11.338/build/pdf.min.js"></script>
+    <script src="https://unpkg.com/pdfjs-dist@2.11.338/build/pdf.worker.min.js"></script>
+</head>
+
+<body>
+
+    <div id="wrapper" class="active">
+
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#">Tecnologia da Usinagem
+      <span id="menu-toggle" class="main_icon glyphicon glyphicon-align-justify"></span>
+    </a></li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                <li><a class=" " href="Movimento&Grandezas.html">Movimento e Grandezas</a></li>
+                <li><a class=" " href="GeometriaFerramentaCorte.html">Geometria da Ferramenta de Corte</a></li>
+                <li><a class="current" href="MecanismosFormacaoCavao.html">Mecanismos de Formação de Cavaco</a></li>
+                <li><a class=" " href="Forca&PotenciadeUsinagem.html">Forca e Potência de Usinagem </a></li>
+                <li><a class=" " href="DesgasteAvarias&VidadaFerramenta.html">Desgaste, Avarias e Vida da Ferramenta de Corte</a></li>
+                <li><a class=" " href="Usinabilidade.html">Usinabilidade</a></li>
+                <li><a class=" " href="Torneamento.html">Processo de Torneamento</a></li>
+                <li><a class=" " href="Fresamento.html">Processo  de fresamento</a></li>
+                <li><a class=" " href="Furação.html">Processo de Furação</a></li>
+            </ul>
+        </div>
+
+        <!-- Page content -->
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-8 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="/index.html">
+                                <i class="glyphicon glyphicon glyphicon-home"></i> Página Principal
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            <h3>Mecanismos de Formação de Cavaco </h3>
+                            <h3>Conteúdo Abordado neste Tópico</h3>
+                            <p class="lesson-text">
+                                <p>Neste tópico sobre movimentos e randezas no processo de usinagem, adentraremos no âmbito fascinante da fabricação mecânica, onde a precisão e o controle dos movimentos desempenham um papel fundamental. Exploraremos como
+                                    os princípios do movimento se aplicam a máquinas de usinagem, que são essenciais para a produção de componentes e peças precisas.</p>
+                                <p>Para compreender plenamente a usinagem, é crucial dominar conceitos como velocidade de corte, avanço, rotação da ferramenta e taxas de remoção de material. Estas grandezas são vitais para alcançar resultados de usinagem
+                                    de alta qualidade, minimizando o desgaste das ferramentas e maximizando a eficiência do processo.</p>
+                                <p>Este tópico é fundamental para aqueles que desejam se aprofundar no mundo da usinagem mecânica O entendimento dos movimentos e grandezas no processo de usinagem é a base para o sucesso na fabricação de componentes precisos
+                                    e de alta qualidade.</p>
+
+                                <div class="pdf_content">
+                                    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+                                    <div class="btn_pdf">
+                                        <button id="prev">Página anterior</button>
+                                        <button id="next">Próxima página</button> &nbsp; &nbsp;
+                                        <span>Página: <span id="page_num"></span> / <span id="page_count"></span></span>
+                                    </div>
+
+                                    <canvas id="pdf-exemplo"></canvas>
+
+                                    <div class="pdf_content">
+                                        <p>Utilize o link abaixo para realizar o download do arquivo PDF</p>
+                                        <a class="btn btn-warning" href="https://drive.google.com/file/d/1Jf3mATHDaz40XzGS86jS8EbT5sBVEiR4/view?usp=drive_link">Link para Download</a>
+                                    </div>
+
+                                    <script>
+                                        var url = 'MovimentosGrandezas.pdf';
+
+                                        var pdfjsLib = window['pdfjs-dist/build/pdf'];
+
+                                        pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.mjs';
+
+                                        var pdfDoc = null,
+                                            pageNum = 1,
+                                            pageRendering = false,
+                                            pageNumPending = null,
+                                            scale = 1.0,
+                                            canvas = document.getElementById('pdf-exemplo'),
+                                            ctx = canvas.getContext('2d');
+
+                                        function renderPage(num) {
+                                            pageRendering = true;
+                                            pdfDoc.getPage(num).then(function(page) {
+                                                var viewport = page.getViewport({
+                                                    scale: scale
+                                                });
+                                                canvas.height = viewport.height;
+                                                canvas.width = viewport.width;
+                                                var renderContext = {
+                                                    canvasContext: ctx,
+                                                    viewport: viewport
+                                                };
+                                                var renderTask = page.render(renderContext);
+                                                renderTask.promise.then(function() {
+                                                    pageRendering = false;
+                                                    if (pageNumPending !== null) {
+                                                        renderPage(pageNumPending);
+                                                        pageNumPending = null;
+                                                    }
+                                                });
+                                            });
+
+                                            document.getElementById('page_num').textContent = num;
+                                        }
+
+                                        function queueRenderPage(num) {
+                                            if (pageRendering) {
+                                                pageNumPending = num;
+                                            } else {
+                                                renderPage(num);
+                                            }
+                                        }
+
+                                        function onPrevPage() {
+                                            if (pageNum <= 1) {
+                                                return;
+                                            }
+                                            pageNum--;
+                                            queueRenderPage(pageNum);
+                                        }
+
+                                        document.getElementById('prev').addEventListener('click', onPrevPage);
+
+                                        function onNextPage() {
+                                            if (pageNum >= pdfDoc.numPages) {
+                                                return;
+                                            }
+                                            pageNum++;
+                                            queueRenderPage(pageNum);
+                                        }
+
+                                        document.getElementById('next').addEventListener('click', onNextPage);
+
+                                        pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+                                            pdfDoc = pdfDoc_;
+                                            document.getElementById('page_count').textContent = pdfDoc.numPages;
+                                            renderPage(pageNum);
+                                        });
+                                    </script>
+
+
+
+                                    <div>
+                                        <p> <b>Referencias:</b>
+                                            <p>NORTON, Rob. Projeto de máquinas: uma abordagem integrada. 2. ed. Porto Alegre, RS: Bookman, 2004. xiii, 931 p. + 1 CD-ROM 4 ¾ pol. ISBN 8536302739.</p>
+                                            <p>SHIGLEY, Joseph Edward; MISCHKE, Charles R.; BUDYNAS, Richard G. Projeto de engenharia mecânica. 7. ed. Porto Alegre: Bookman, 2005. 960 p. ISBN 85-363-0562-2.</p>
+                                            <p>MELCONIAN, Sarkis. Elementos de máquinas. São Paulo: Érica, 2000. 342p. ISBN 8571947031</p>
+                                            <p>JUVENAL, R. C. & MARSSHEK, K. M. Fundamentals of Machine Component Design, John Wiley & Sons, New York, 1991.</p>
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 practice">
+                        <div class="exercise-content">
+                            <h3>Materiais Complementares</h3>
+                            <p>Utilize os materiais abaixo para fixação do conteúdo</p>
+                            <ul>
+                                <li><a href="">A - Em criação</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Videos e Video-Aulas</h3>
+                            <p>Segue links sobre o assunto abordado</p>
+                            <ul>
+                                <li><a href="https://www.youtube.com/watch?v=0Jn3xay4YDk&t=4s">link 1</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=Xtfs-vuZ3eA">link 2</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="quiz-content">
+                            <h3>Atividades e Quiz</h3>
+                            <p>Realize as atividades e o Quiz da Aula 1</p>
+                            <ul>
+                                <li>
+                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeT0XkSCRp24f9YqbzfVIy2CwinHjhVIngkTgj2VYoIh5zuwA/viewform?usp=sf_link">Quiz 1</a>
+                                </li>
+                                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdlgpmvfG1c7VDuqNOumOMG99NXSpDy6cS_aiGTYk-82N5sWQ/viewform?usp=sf_link">Quiz 2</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <!-- end of page content -->
+
+
+    </div>
+    <!-- end of wrapper -->
+
+    <script>
+        $(document).ready(optimizeMobile);
+        $(window).on('resize', optimizeMobile);
+
+        function optimizeMobile() {
+            if (($(window).width() <= 767) || (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+                $("#wrapper ").removeClass("active ");
+            } else {
+                $("#wrapper ").addClass("active ");
+            }
+        }
+
+        $("#menu-toggle ").click(function(e) {
+            e.preventDefault();
+            $("#wrapper ").toggleClass("active ");
+        });
+
+        $("#hint-toggle ").click(function(e) {
+            $("#hint ").toggle();
+        });
+    </script>
+</body>
+
+<!-- Mirrored from linuxjourney.com/lesson/what-is-a-router by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Aug 2023 09:41:55 GMT -->
+
+</html>
