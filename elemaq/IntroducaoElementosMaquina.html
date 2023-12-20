@@ -16,6 +16,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
     <meta name="csrf-param" content="authenticity_token" />
     <meta name="csrf-token" content="FZTSZKN7+Fp+uALeFUetKoIurtteRcfikEdYFpJeu80RmmAh5mnIBti9GyO0DoWiT0jWdu/iiJ9PmQoZvqC1eQ==" />
+    <script src="https://unpkg.com/pdfjs-dist@2.11.338/build/pdf.min.js"></script>
+    <script src="https://unpkg.com/pdfjs-dist@2.11.338/build/pdf.worker.min.js"></script>
 </head>
 
 <body>
@@ -80,11 +82,11 @@
                                 <p> Este tópico será fundamental para qualquer pessoa que deseje mergulhar no mundo do projeto mecânico em elementos de máquina.</p>
 
                                 <div class="pdf_content">
-                                    <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+                                    <script src='/build/pdf.mjs'></script>
 
                                     <div class="btn_pdf">
                                         <button id="prev">Página anterior</button>
-                                        <button id="next">Proxima página</button> &nbsp; &nbsp;
+                                        <button id="next">Próxima página</button> &nbsp; &nbsp;
                                         <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
                                     </div>
 
@@ -92,7 +94,7 @@
 
                                     <div class="pdf_content">
                                         <p>Utilize o link abaixo para realizar o download do arquivo pdf</p>
-                                        <a class=" btn btn-warning " href="https://drive.google.com/file/d/1Jf3mATHDaz40XzGS86jS8EbT5sBVEiR4/view?usp=drive_link ">link para Download</a>
+                                        <a class="btn btn-warning" href="https://drive.google.com/file/d/1Jf3mATHDaz40XzGS86jS8EbT5sBVEiR4/view?usp=drive_link">link para Download</a>
                                     </div>
 
                                     <script>
@@ -100,7 +102,8 @@
 
                                         var pdfjsLib = window['pdfjs-dist/build/pdf'];
 
-                                        pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+                                        // Corrected the workerSrc path
+                                        pdfjsLib.GlobalWorkerOptions.workerSrc = '/build/pdf.worker.mjs';
 
                                         var pdfDoc = null,
                                             pageNum = 1,
